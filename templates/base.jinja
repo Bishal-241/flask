@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
     {% block title %}   {% endblock  %} - Flask Learning Application
-    {% block  html_heads %}   {% endblock %}
   </title>
+      {% block  html_heads %}
+        <script src="https://cdn.tailwindcss.com"></script>
+      {% endblock %}
+
 </head>
 <body>
-{% include 'navbar.html' %}
-{% block main %}   {% endblock %}
+{% include 'components/navbar.html' %}
+{% block main %}    {% endblock %}
 {% block footer %}  {% endblock %}
 </body>
 </html>
